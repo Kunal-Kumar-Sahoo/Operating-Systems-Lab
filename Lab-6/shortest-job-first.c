@@ -38,7 +38,7 @@ float mean(int arr[], int n) {
 
 int find_shortest_job_index(process processes[], int n, int current_time) {
 	for(int i = 0; i < n; ++i) 
-		if(!processes[i].completed && processes[i].completed <= current_time)
+		if(!processes[i].completed && processes[i].arrival_time <= current_time)
 			return i;
 	return -1;
 }
